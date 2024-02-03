@@ -21,7 +21,7 @@ class App {
     }
 
     private static ArrayList<String> getCharFromLists(String text) {
-        return new ArrayList<>(Arrays.asList(text.toLowerCase().split(" ")));
+        return new ArrayList<>(Arrays.asList(text.toLowerCase().split("")));
     }
 }
 //END
