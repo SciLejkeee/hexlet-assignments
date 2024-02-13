@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class App {
     public static Map<String, Integer> getWordCount(String sentence) {
-        if (sentence.isEmpty()) return new HashMap<>();
+        if (sentence.isEmpty()) { return new HashMap<>(); }
 
         String[] splitSentence = sentence.split(" ");
         Map<String, Integer> wordsCount = new LinkedHashMap<>();
@@ -16,7 +16,6 @@ public class App {
     }
 
     public static String toString(Map<String, Integer> hashMap) {
-        if (HashMap.isEmpty()) return "{}";
         StringBuilder result = new StringBuilder("{\n");
         for (Map.Entry<String, Integer> newHashMap : hashMap.entrySet()) {
             result.append(" ").append(newHashMap.getKey()).append(": ").append(newHashMap.getValue()).append("\n");
@@ -24,4 +23,5 @@ public class App {
         result.append("}");
         return result.toString();
     }
+
 }
