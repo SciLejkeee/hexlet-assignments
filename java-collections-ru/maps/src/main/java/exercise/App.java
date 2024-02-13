@@ -18,6 +18,9 @@ public class App {
     }
 
     public static String toString(Map<String, Integer> hashMap) {
+        if (hashMap.isEmpty()) {
+            return "{}";
+        }
         StringBuilder result = new StringBuilder("{\n");
         for (Map.Entry<String, Integer> newHashMap : hashMap.entrySet()) {
             result.append("  ").append(newHashMap.getKey()).append(": ").append(newHashMap.getValue()).append("\n");
