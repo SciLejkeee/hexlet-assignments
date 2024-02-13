@@ -5,10 +5,12 @@ import java.util.Map;
 
 public class App {
     public static Map<String, Integer> getWordCount(String sentence) {
-        if (sentence.isEmpty()) { return new HashMap<>(); }
+        if (sentence.isEmpty()) {
+            return new HashMap<>();
+        }
 
         String[] splitSentence = sentence.split(" ");
-        Map<String, Integer> wordsCount = new LinkedHashMap<>();
+        Map<String, Integer> wordsCount = new HashMap<>();
         for (String s : splitSentence) {
             wordsCount.put(s, (wordsCount.getOrDefault(s, 0) + 1));
         }
@@ -23,5 +25,4 @@ public class App {
         result.append("}");
         return result.toString();
     }
-
 }
